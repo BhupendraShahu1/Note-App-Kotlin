@@ -9,6 +9,8 @@ NoteApp With Kotlin Code
 - Change UIl̥
 - Change languge and theam 
 # OutLook
+## Video 
+https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/3f38525b-0b0c-4ef9-a790-53d864048e4b
 ### Splash Screen
 ![Screenshot_20231121_170606](https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/ca1f631a-528b-46a2-ab15-405e47cd1ebf)
 ### Empty Home Screen
