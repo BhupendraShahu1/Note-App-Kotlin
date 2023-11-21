@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Notes</string>
+    <string name="search_something_here">search_something_here</string>
+    <string name="write_tittle_here">write tittle here</string>
+    <string name="write_content_here">write content here</string>
+    <string name="addnote">AddNote</string>
+    <string name="updatenote">UpdateNote</string>
+    <string name="title">Title</string>
+</resources>

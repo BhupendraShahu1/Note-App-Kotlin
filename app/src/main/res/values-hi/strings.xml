@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="write_tittle_here">यहाँ शीर्षक लिखें</string>
+    <string name="search_something_here">यहां कुछ खोजें</string>
+    <string name="write_content_here">यहां सामग्री लिखें</string>
+    <string name="addnote">जोड़े</string>
+    <string name="updatenote">नवीनतम बनाना</string>
+    <string name="title">शीर्षक</string>
+</resources>

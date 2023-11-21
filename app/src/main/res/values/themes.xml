@@ -1,0 +1,68 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
+
+
+    </style>
+    <style name="Theme.Notes" parent="Base.Theme.Notes">
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    //
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#ffffff</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#000000</item>
+    </style>
+    //
+
+    <style name="Text">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text2">
+        <item name="android:textColor">#B3000000</item>
+    </style>
+
+    <style name="parent_linear_layout">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="icon_background">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="search_background">
+        <item name="android:background">@drawable/bgsearch</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="statusBar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="background_drawable">
+        <item name="android:background">@drawable/item_background</item>
+    </style>
+
+    <style name="item2_text">
+        <item name="android:textColor">#99000000</item>
+    </style>
+
+    <style name="time_text">
+        <item name="android:textColor">#80000000</item>
+    </style>
+
+    <!--    <style name="update_text_tittle">-->
+    <!--        <item name="android:textColor">#80000000</item>-->
+    <!--    </style>-->
+</resources>
