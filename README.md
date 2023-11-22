@@ -1,13 +1,19 @@
-# Note-App-Kotlin
-NoteApp With Kotlin Code
-# Feature
-- Note App are Based on CURD Oprations
-- Easey to use
-- Add Notes 
-- Delete Notes
-- Update Notes
-- Change UIl̥
-- Change languge and theam 
+# APP Name 
+### Note App 
+- # Overview
+ This is a simple note-taking app developed in Kotlin in MVVM Architecture Pattern , utilizing the Room Database for efficient data storage and management. The app allows users to create, edit, and delete notes, ensuring a seamless experience for organizing thoughts and tasks.
+- # Feature 
+- **Create Notes:** Easily add new notes with a title and content.
+- **Edit Notes:** Update existing notes with new information or modifications.
+- **Delete Notes:** Remove unwanted notes to keep the list concise.
+- **Room Database:** Utilizes Room for local data persistence, providing a robust and efficient solution for storing notes.
+- **Change UI:** In this App we have two type of UI that are You change it according to You
+- **Change languge and theam:** In this App You can change Dark and Light mode and Language Hindi and English
+- # Requirements
+ - ### Android Studio
+- ### Android SDK
+- ### Kotlin
+- ### xml
 # OutLook
 ## Video 
 https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/e8f156ae-6e0a-4753-be3a-46b38e9d3781
