@@ -1,5 +1,5 @@
 # APP Name 
-### Note App 
+### Note App
 - # Overview
  This is a simple note-taking app developed in Kotlin in MVVM Architecture Pattern , utilizing the Room Database for efficient data storage and management. The app allows users to create, edit, and delete notes, ensuring a seamless experience for organizing thoughts and tasks.
 - # Feature 
@@ -14,6 +14,46 @@
 - ### Android SDK
 - ### Kotlin
 - ### xml
+ ## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following tools installed:
+
+- [Android Studio](https://developer.android.com/studio)
+- [Android SDK](https://developer.android.com/studio#downloads)
+- [Kotlin](https://kotlinlang.org/docs/getting-started.html)
+
+### Clone the Repository
+
+1. Open a terminal window.
+
+2. Clone the repository using the following command:
+
+    ```bash
+    git clone https://github.com/BhupendraShahu1/Note-App-Kotlin.git
+    ```
+
+### Open in Android Studio
+
+1. Launch Android Studio.
+
+2. Click on "Open an existing Android Studio project."
+
+3. Navigate to the directory where you cloned the repository and select the project.
+
+### Run the App
+
+1. Connect your Android device or use an emulator.
+
+2. Click on the "Run" button in Android Studio to install and launch the app on your device.
+
+### Explore the App
+
+- Open the app and explore the intuitive user interface.
+- Create new notes, edit existing ones, and delete notes as needed.
+- Experience the seamless integration of Room Database for efficient data storage.
+
 # OutLook
 ## Video 
 https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/e8f156ae-6e0a-4753-be3a-46b38e9d3781
