@@ -50,16 +50,25 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = userAdopter
+            val touchHelper = ItemTouchHelper(swipeGesture)
+            touchHelper.attachToRecyclerView(binding.recycle)
         }
         //
 
-        val touchHelper = ItemTouchHelper(swipeGesture)
-        touchHelper.attachToRecyclerView(binding.recycle)
+
         //
         userViewModel.getAllUserData(this)?.observe(this, Observer {
-            userAdopter.setData(it as ArrayList<UserEntity>)
+            if (it.isNotEmpty()) {
+                binding.recycle.visibility = View.VISIBLE
+                binding.noDataFoundHere.visibility = View.GONE
+                userAdopter.setData(it as ArrayList<UserEntity>)
 //            binding.recycle.scrollToPosition(0)
-            list = ArrayList(it)
+                list = ArrayList(it)
+            } else {
+                binding.recycle.visibility = View.GONE
+                binding.noDataFoundHere.visibility = View.VISIBLE
+            }
+
         })
     }
 
@@ -112,7 +121,6 @@ class MainActivity : AppCompatActivity() {
         binding.switcher.setOnClickListener(View.OnClickListener {
             if (b) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-
                 editor = sharedPreferences.edit()
                 editor.putBoolean("night", false)
             } else {

@@ -3,116 +3,130 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        style="@style/parent_linear_layout"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        style="@style/parent_linear_layout"
+        android:layout_height="match_parent">
 
-
-        <TextView
-            style="@style/Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Notes"
-            android:textSize="40sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             style="@style/parent_linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-
-            <ScrollView
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
                 style="@style/parent_linear_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="200dp"
+                app:collapsedTitleTextAppearance="@integer/material_motion_duration_long_2"
+                app:expandedTitleMarginBottom="70dp"
+                app:expandedTitleTextAppearance="@integer/material_motion_duration_long_2"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="Notes"
+                app:titleCollapseMode="scale">
 
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/parent_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    tools:context=".MainActivity">
+
+                    <ImageView
+                        android:id="@+id/setting"
+                        style="@style/icon_background"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/baseline_settings_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switcher"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/_6sdp"
+                        android:theme="@style/icon_background"
+                        app:layout_constraintEnd_toStartOf="@+id/setting"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/button_search"
+                        style="@style/icon_background"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/baseline_search_24"
+                        app:layout_constraintEnd_toStartOf="@+id/switcher"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:queryHint="@string/search_something_here" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/parent_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="@integer/material_motion_duration_long_2">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            style="@style/parent_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#C8C1C1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle"
                     style="@style/parent_linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:visibility="gone" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        style="@style/parent_linear_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:context=".MainActivity">
+                <TextView
+                    android:id="@+id/no_data_found_here"
+                    style="@style/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:fontFamily="@font/notbad"
+                    android:text="No Data Found "
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-                        <ImageView
-                            android:id="@+id/setting"
-                            style="@style/icon_background"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginEnd="10dp"
-                            android:padding="@dimen/_7sdp"
-                            android:src="@drawable/baseline_settings_24"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switcher"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:padding="@dimen/_6sdp"
-                            android:theme="@style/icon_background"
-                            app:layout_constraintEnd_toStartOf="@+id/setting"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_search"
-                            style="@style/icon_background"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginEnd="@dimen/_6sdp"
-                            android:padding="@dimen/_7sdp"
-                            android:src="@drawable/baseline_search_24"
-                            app:layout_constraintEnd_toStartOf="@+id/switcher"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:queryHint="@string/search_something_here" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_margin="5dp"
-                        android:background="#C8C1C1" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycle"
-                        style="@style/parent_linear_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:id="@+id/no_data_found_here"
-                        style="@style/Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/_60sdp"
-                        android:fontFamily="@font/notbad"
-                        android:text="No Data Found "
-                        android:textSize="30sp"
-                        android:visibility="gone" />
-                </LinearLayout>
-            </ScrollView>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/baseline_add_24" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_add_24" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

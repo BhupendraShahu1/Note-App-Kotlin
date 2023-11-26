@@ -14,8 +14,6 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-//
-
 //        statusBar()
 //        }
         Handler(Looper.getMainLooper()).postDelayed(
@@ -23,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-            }, 1000
+            }, 2500
         )
     }
 

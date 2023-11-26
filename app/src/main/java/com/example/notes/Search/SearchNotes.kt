@@ -34,7 +34,6 @@ class SearchNotes : AppCompatActivity() {
             adapter = userAdopter
         }
     }
-
     private fun searchData() {
         searchBinding.buttonSearchView.setOnQueryTextListener(object :
             SearchView.OnQueryTextListener {
@@ -42,8 +41,9 @@ class SearchNotes : AppCompatActivity() {
                 return false
             }
             override fun onQueryTextChange(newText: String): Boolean {
-                val text = newText.trim()
-                userViewModel.search(this@SearchNotes, text)?.observe(this@SearchNotes, Observer {
+                val textSearch = newText.trim()
+                userViewModel.search(this@SearchNotes, textSearch)
+                    ?.observe(this@SearchNotes, Observer {
                         userAdopter.setData(it as ArrayList<UserEntity>)
                     })
                 return true
@@ -55,7 +55,6 @@ class SearchNotes : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
     }
-
     private fun statusBar() {
         val statusBarColor = ContextCompat.getColor(
             this,
@@ -64,6 +63,7 @@ class SearchNotes : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().statusBarColor = statusBarColor
         }
+
     }
 
 }
