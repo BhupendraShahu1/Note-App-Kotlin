@@ -42,7 +42,7 @@ class SearchNotes : AppCompatActivity() {
             }
             override fun onQueryTextChange(newText: String): Boolean {
                 val textSearch = newText.trim()
-                userViewModel.search(this@SearchNotes, textSearch)
+                userViewModel.search(this@SearchNotes, "%$textSearch%")
                     ?.observe(this@SearchNotes, Observer {
                         userAdopter.setData(it as ArrayList<UserEntity>)
                     })

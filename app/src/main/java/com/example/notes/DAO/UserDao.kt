@@ -17,6 +17,7 @@ interface UserDao {
     fun getAllUserData(): LiveData<List<UserEntity>>
 
     @Query("select * from notesData where tittle LIKE :search")
+//    @Query("Select * from notesData where tittle like :search" )
     fun searchTittle(search: String): LiveData<List<UserEntity>>
 
     @Update
