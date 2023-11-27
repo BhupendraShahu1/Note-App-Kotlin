@@ -31,7 +31,7 @@
     </style>
 
     <style name="parent_linear_layout">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/white</item>3
     </style>
 
     <style name="icon_background">
