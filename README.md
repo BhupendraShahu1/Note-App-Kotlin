@@ -56,7 +56,9 @@ Before you begin, ensure you have the following tools installed:
 
 # OutLook
 ## Video 
-https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/e8f156ae-6e0a-4753-be3a-46b38e9d3781
+
+https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/5b05ebcf-9acd-4bfd-a546-ac91f351ef27
+
 ### Splash Screen
 ![Screenshot_20231121_170606](https://github.com/BhupendraShahu1/Note-App-Kotlin/assets/149964984/ca1f631a-528b-46a2-ab15-405e47cd1ebf)
 ### Empty Home Screen
